@@ -2,21 +2,45 @@ html,
 body {
   height: 100%;
   background-color: #292d3e;
+  overflow: hidden;
+  color: whitesmoke;
 }
 
 .centerbox {
   background-color: #8794cc;
-  color: whitesmoke;
+  z-index: 999;
   font-family: 'Noto Sans', sans-serif;
 }
 
-.centerbox > p {
+.mono {
   font-family: 'PT Mono', monospace;
+}
+
+.top {
+  position: absolute;
+  top: 10%;
+}
+
+.lesstop {
+  position: absolute;
+  top: 20%;
+}
+
+.mid {
+  position: absolute;
+}
+
+.lessbot {
+  position: absolute;
+  top: 60%;
+}
+
+.bot {
+  position: absolute;
+  top: 70%;
 }
 
 footer {
   position: absolute;
   bottom: 0%;
-  color: whitesmoke;
-  font-family: 'PT Mono', monospace;
 }
