@@ -18,7 +18,7 @@ body {
 
 .top {
   position: absolute;
-  top: 10%;
+  top: 5%;
 }
 
 .lesstop {
@@ -27,20 +27,76 @@ body {
 }
 
 .mid {
+  top: 45%;
   position: absolute;
 }
 
 .lessbot {
   position: absolute;
-  top: 60%;
+  top: 65%;
 }
 
 .bot {
   position: absolute;
-  top: 70%;
+  top: 85%;
 }
+
+.marquee-left {
+  animation: left linear infinite, fade 5s forwards;
+  display: block;
+  width: 200%;
+  /* transform: translateX(-100%); */
+}
+
+.marquee-left span {
+  float: left;
+  width: 50%;
+}
+
+.marquee-right {
+  animation: right linear infinite, fade 10s forwards;
+  display: block;
+  width: 200%;
+  /* transform: translateX(100%); */
+}
+
+.marquee-right span {
+  float: right;
+  width: 50%;
+}
+
+/* .fade {
+  animation: ;
+} */
 
 footer {
   position: absolute;
   bottom: 0%;
+}
+
+@keyframes left {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes right {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

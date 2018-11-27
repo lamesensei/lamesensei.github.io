@@ -1,9 +1,8 @@
 let skills = ['REACT', 'JAVASCRIPT', 'HTML', 'CSS', 'NODE', 'EXPRESS', 'PSQL', 'GRAPHQL', 'GIT'];
 const section = ['top', 'lesstop', 'mid', 'lessbot', 'bot'];
-
-const size = ['display-1', 'display-2', 'display-3', 'display-4', 'display-5', 'display-6'];
-
-const direction = ['left', 'right'];
+const size = ['display-1', 'display-2', 'display-3', 'display-4', 'h1', 'h2'];
+const direction = ['marquee-left', 'marquee-right'];
+const color = ['#7E57C2', '#FF5874', '#89DDFF', '#C3E88D', '#FFD800'];
 
 function rand(min, max) {
   min = Math.ceil(min);
@@ -14,20 +13,43 @@ function rand(min, max) {
 window.onload = () => {
   for (let i = 0; i < 5; i++) {
     let randomWordIndex = rand(0, skills.length - 1);
-    let randomSizeIndex = rand(0, 5);
-    let scrollDelay = rand(0, 5);
-    console.log(randomWordIndex);
+    let randomSizeIndex = rand(0, size.length - 1);
+    let randomColorIndex = rand(0, color.length - 1);
+    let randomWord = skills[randomWordIndex];
 
-    const word = document.createElement('marquee');
+    const holder = document.createElement('div');
+    const word1 = document.createElement('span');
+    const word2 = document.createElement('span');
 
-    word.innerHTML = skills[randomWordIndex];
-    word.classList.add(section[i], size[randomSizeIndex], 'mono');
-    word.setAttribute('scrolldelay', scrollDelay);
-    word.setAttribute('direction', direction[rand(0, 1)]);
+    word1.innerHTML = randomWord;
+    word2.innerHTML = randomWord;
 
-    document.querySelector('.boss').appendChild(word);
+    holder.classList.add(
+      section[i],
+      size[randomSizeIndex],
+      direction[rand(0, 1)],
+      'mono',
+      'justify-content-between',
+      'd-flex'
+    );
+    holder.style.opacity = 0;
+    holder.style.color = color[randomColorIndex];
+    holder.style.animationDelay = `${rand(0, 5)}s`;
+    holder.style.animationDuration = `${window.innerWidth / 50}s, 5s`;
+    holder.appendChild(word1);
+    holder.appendChild(word2);
+    document.querySelector('#marquee').appendChild(holder);
 
     skills.splice(randomWordIndex, 1);
-    console.log(skills);
+    size.splice(randomSizeIndex, 1);
+    color.splice(randomColorIndex, 1);
   }
+
+  // setTimeout(() => {
+  //   for (let i = 0; i < 5; i++) {
+  //     target = document.getElementsByClassName(i)[0];
+  //     target.classList.remove('d-none');
+  //     target.classList.add('d-flex', 'fadeIn');
+  //   }
+  // }, 5000);
 };
