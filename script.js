@@ -1,6 +1,6 @@
 let skills = ['REACT', 'JAVASCRIPT', 'HTML', 'CSS', 'NODE', 'EXPRESS', 'PSQL', 'GRAPHQL', 'GIT'];
 const section = ['top', 'lesstop', 'mid', 'lessbot', 'bot'];
-const size = ['display-1', 'display-2', 'display-3', 'display-4', 'h1', 'h2'];
+const size = ['size-one', 'size-two'];
 const direction = ['marquee-left', 'marquee-right'];
 const color = ['#7E57C2', '#FF5874', '#89DDFF', '#C3E88D', '#FFD800'];
 
@@ -41,7 +41,7 @@ window.onload = () => {
     document.querySelector('#marquee').appendChild(holder);
 
     skills.splice(randomWordIndex, 1);
-    size.splice(randomSizeIndex, 1);
+    // size.splice(randomSizeIndex, 1);
     color.splice(randomColorIndex, 1);
   }
 
