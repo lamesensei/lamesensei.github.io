@@ -46,8 +46,8 @@ function scrollyWords() {
 }
 
 function flip(event) {
-  const target = event.target.parentElement.parentElement;
-  target.classList[target.classList.length - 1] === 'flipclass'
+  const target = document.querySelector('.centerinner');
+  target.classList.contains('flipclass')
     ? target.classList.remove('flipclass')
     : target.classList.add('flipclass');
 }
