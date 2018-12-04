@@ -1,4 +1,4 @@
-let skills = ['REACT', 'JAVASCRIPT', 'HTML', 'CSS', 'NODE', 'EXPRESS', 'PSQL', 'GRAPHQL', 'GIT'];
+let skills = ['REACT', 'JS', 'HTML', 'CSS', 'NODE', 'EXPRESS', 'PSQL', 'GRAPHQL', 'GIT'];
 const section = ['top', 'lesstop', 'mid', 'lessbot', 'bot'];
 const size = ['size-one', 'size-two'];
 const direction = ['marquee-left', 'marquee-right'];
@@ -10,7 +10,7 @@ function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
 }
 
-window.onload = () => {
+function scrollyWords() {
   for (let i = 0; i < 5; i++) {
     let randomWordIndex = rand(0, skills.length - 1);
     let randomSizeIndex = rand(0, size.length - 1);
@@ -41,15 +41,23 @@ window.onload = () => {
     document.querySelector('#marquee').appendChild(holder);
 
     skills.splice(randomWordIndex, 1);
-    // size.splice(randomSizeIndex, 1);
     color.splice(randomColorIndex, 1);
   }
+}
 
-  // setTimeout(() => {
-  //   for (let i = 0; i < 5; i++) {
-  //     target = document.getElementsByClassName(i)[0];
-  //     target.classList.remove('d-none');
-  //     target.classList.add('d-flex', 'fadeIn');
-  //   }
-  // }, 5000);
+function flip(event) {
+  const target = event.target.parentElement.parentElement;
+  target.classList[target.classList.length - 1] === 'flipclass'
+    ? target.classList.remove('flipclass')
+    : target.classList.add('flipclass');
+}
+
+window.onload = () => {
+  scrollyWords();
+  const flippy = document.querySelectorAll('.flippy');
+  console.log(flippy);
+
+  Object.keys(flippy).forEach((key) => {
+    flippy[key].addEventListener('click', flip);
+  });
 };

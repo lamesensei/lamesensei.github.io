@@ -10,13 +10,53 @@ body {
   font-family: 'PT Mono', monospace;
 }
 
-.centerbox {
-  background-color: #8794cc;
+.rubik {
+  font-family: 'Rubik', sans-serif;
+}
+
+.centercard {
+  background-color: transparent;
   min-width: 300px;
   max-width: 300px;
   height: 400px;
-  z-index: 999;
-  font-family: 'Rubik', sans-serif;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.centerinner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: transform 1.5s;
+  transition: transform 1.5s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.centerfront,
+.centerback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flipclass {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.centerfront {
+  background-color: #8794cc;
+  z-index: 2;
+}
+
+.centerback {
+  background-color: #8794cc;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  z-index: 1;
 }
 
 .title {
@@ -24,6 +64,7 @@ body {
   letter-spacing: 1px;
   padding: 0;
   margin: 0;
+  font-family: 'Rubik', sans-serif;
 }
 
 .subtitle {
@@ -71,7 +112,6 @@ body {
   animation: right linear infinite, fade 10s forwards;
   display: block;
   width: 200%;
-  /* transform: translateX(100%); */
 }
 
 .marquee-right span {
@@ -85,6 +125,16 @@ body {
 
 .size-two {
   font-size: 6vw;
+}
+
+#resume {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
+#resume img {
+  width: 15vw;
 }
 
 footer {
