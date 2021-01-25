@@ -1,0 +1,18 @@
+{
+    "first_name": "Liang Jun",
+    "last_name": "Phua",
+    "title": "Full Stack Developer",
+    "phone": {
+        "text": "+65 96346924",
+        "href": "tel:+6596346924"
+    },
+    "email": {
+        "text": "hello@phualiangjun.com",
+        "href": "mailto:hello@phualiangjun.com"
+    },
+    "github": {
+        "text": "lamesensei.github.io",
+        "href": "https://lamesensei.github.io"
+    },
+    "about": "Technology and internet culture enthusiast. Has an uncanny knack for troubleshooting software or hardware issues. Worked previously at small startup developing enterprise level software using Laravel & Angular. Currently working on personal projects. Looking out for opportunities in bigger size companities to experience different development practices."
+}
