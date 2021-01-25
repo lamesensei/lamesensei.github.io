@@ -10,7 +10,7 @@ module.exports = {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-      "2xl": "1536px",
+      // "2xl": "1536px",
     },
     colors: {
       transparent: "transparent",
@@ -348,6 +348,7 @@ module.exports = {
       4: "repeat(4, minmax(0, 1fr))",
       5: "repeat(5, minmax(0, 1fr))",
       6: "repeat(6, minmax(0, 1fr))",
+      12: "repeat(12, minmax(0, 1fr))",
     },
     height: (theme) => ({
       auto: "auto",

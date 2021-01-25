@@ -1,7 +1,7 @@
 {
     "first_name": "Liang Jun",
     "last_name": "Phua",
-    "title": "Full Stack Developer",
+    "title": "Full-Stack Web Developer",
     "phone": {
         "text": "+65 96346924",
         "href": "tel:+6596346924"
@@ -14,5 +14,89 @@
         "text": "lamesensei.github.io",
         "href": "https://lamesensei.github.io"
     },
-    "about": "Technology and internet culture enthusiast. Has an uncanny knack for troubleshooting software or hardware issues. Worked previously at small startup developing enterprise level software using Laravel & Angular. Currently working on personal projects. Looking out for opportunities in bigger size companities to experience different development practices."
+    "experiences": [
+        {
+            "title": "Software Engineer",
+            "company": "StaffOnDemand Pte Ltd (RecruiterPal)",
+            "date_string": "MAR 19 - DEC 20",
+            "description": "My first job as a Developer!",
+            "responsibilities": [
+                "Developed new features for the company's flagship ATS in Laravel",
+                "Created new UI components using AngularJS & JQuery",
+                "Launched several marketing campaign pages; with Google Analytics",
+                "Prototyped React Native App and NodeJS Telegram Chat Bot"
+            ]
+        },
+        {
+            "title": "Instructional Associate (TA)",
+            "company": "General Assembly Singapore",
+            "date_string": "NOV 18 - MAR 19",
+            "description": "My first job as a sensei! Kinda.",
+            "responsibilities": [
+                "Assisted Lead instructor in administrative duties",
+                "Conducted morning coding exercies to teach basic topics",
+                "Helped students with their homework or queries",
+                "Made sure students felt supported and engaged"
+            ]
+        },
+        {
+            "title": "Associate Engineer",
+            "company": "ST Electronics",
+            "date_string": "NOV 18 - MAR 19",
+            "description": "My first corporate job?",
+            "responsibilities": [
+                "Worked with DSTA to coordinate network projects",
+                "Assisted millitary personnel in solving transmission network faults",
+                "Documented and also perform root cause analysis",
+                "Main in charge for handling Monitoring system (software) issues"
+            ]
+        },
+        {
+            "title": "Millitary Expert",
+            "company": "Ministry Of Defence",
+            "date_string": "OCT 11 - JUL 16",
+            "description": "It's all classified. Also, my first full-time job!",
+            "responsibilities": [
+                "Performed maintenance on critical communication systems",
+                "Managed materials handling and logistics",
+                "Mentored and trained junior engineers."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "title": "Web Development Immersive",
+            "school": "General Assembly (2018)"
+        },
+        {
+            "title": "Piscine - Basic Coding Bootcamp",
+            "school": "42 US Silicon Valley (2018)"
+        },
+        {
+            "title": "Diploma Information Technology",
+            "school": "Ngee Ann Polytechnic (2008-11)"
+        }
+    ],
+    "skills": {
+        "Current / Learning": [
+            "Googling",
+            "Javascript",
+            "React",
+            "Gatsby",
+            "Elixir",
+            "Laravel",
+            "PHP",
+            "Postgres",
+            "GraphQL"
+        ],
+        "History": [
+            "React Native",
+            "TypeScript",
+            "MobX",
+            "Ruby On Rails",
+            "Java",
+            "C"
+        ]
+    },
+    "about": " Developer with a proven track record of escaping VIM & standing up during stand-up. Worked previously in a small startup developing enterprise level software. Comfortable handling multiple roles and different programming languages. Currently looking for opportunities to experience the development environment / dynamic of bigger teams."
 }
