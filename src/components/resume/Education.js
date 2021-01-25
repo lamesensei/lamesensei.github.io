@@ -15,7 +15,6 @@ const Education = ({ sectionHeader, education }) => {
       <Title>{item.title}</Title>
     </EducationItem>
   ));
-  console.log(education);
   return (
     <EducationSection>
       <SectionHeader>{sectionHeader}</SectionHeader>
