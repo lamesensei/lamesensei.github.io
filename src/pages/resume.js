@@ -2,6 +2,8 @@ import * as React from "react";
 import tw, { styled } from "twin.macro";
 import { createGlobalStyle } from "styled-components";
 import { graphql } from "gatsby";
+import { Helmet } from "react-helmet";
+
 // import Img from "gatsby-image";
 
 //data
@@ -15,6 +17,7 @@ import About from "../components/resume/About";
 import Header from "../components/resume/Header";
 import Experience from "../components/resume/Experience";
 import Education from "../components/resume/Education";
+import PrintButton from "../components/resume/PrintButton";
 
 // layout
 const Grid = styled.div`
@@ -85,6 +88,8 @@ const PrintJoke = styled.div`
 
 const Resume = ({ data }) => (
   <Layout>
+    <Helmet title="plj / resume" defer={false} />
+    <PrintButton />
     <PrintStyle />
     <BigFlex>
       <Grid>
