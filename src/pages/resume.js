@@ -58,15 +58,10 @@ const PrintStyle = createGlobalStyle`
     }
   }
   @media print {
-    size: A4;
-    layout: landscape;
+    size: A4 portrait;
     html {
       // font-size: 15px;
       margin: 0;
-    }
-
-    #grid: {
-      width: 1000px;
     }
   }
 

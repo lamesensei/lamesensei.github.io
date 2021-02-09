@@ -1,4 +1,3 @@
-import { faWindows } from "@fortawesome/free-brands-svg-icons";
 import * as React from "react";
 import tw, { styled } from "twin.macro";
 
