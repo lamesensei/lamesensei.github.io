@@ -1,31 +1,26 @@
 import * as React from "react";
-import tw, { css } from "twin.macro";
+import tw, { styled } from "twin.macro";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelopeSquare,
-  faPhoneSquare,
+  // faPhoneSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 
 import { SectionHeader } from "./SharedComponents";
 
-const contactStyles = css`
+const ContactSection = styled.section`
+  ${tw`p-4 border-b`}
   grid-area: contact;
 `;
-const ContactSection = ({ children }) => (
-  <section tw="p-4 text-left sm:text-right" css={contactStyles}>
-    {children}
-  </section>
-);
 
-// const ContactSection = tw.section`p-4 text-left sm:text-right`;
 const ContactList = tw.ul``;
-const ContactItem = tw.li`text-light-blue-600 flex flex-row-reverse justify-end sm:block`;
-const ContactLink = tw.a`ml-2 sm:mr-2 leading-relaxed`;
+const ContactItem = tw.li`text-light-blue-600 flex flex-row-reverse items-center justify-end`;
+const ContactLink = tw.a`ml-1 leading-relaxed`;
 
 const Contact = ({ sectionHeader, email, phone, github }) => (
-  <ContactSection id="contact">
+  <ContactSection>
     <SectionHeader>{sectionHeader}</SectionHeader>
     <ContactList>
       <ContactItem>
@@ -38,12 +33,12 @@ const Contact = ({ sectionHeader, email, phone, github }) => (
           fixedWidth
         ></FontAwesomeIcon>
       </ContactItem>
-      <ContactItem>
+      {/* <ContactItem>
         <ContactLink href={phone.href} target="_blank">
           {phone.text}
         </ContactLink>
         <FontAwesomeIcon icon={faPhoneSquare} fixedWidth></FontAwesomeIcon>
-      </ContactItem>
+      </ContactItem> */}
       <ContactItem>
         <ContactLink href={github.href} target="_blank">
           {github.text}

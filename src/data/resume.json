@@ -2,13 +2,9 @@
     "first_name": "Liang Jun",
     "last_name": "Phua",
     "title": "Full-Stack Web Developer",
-    "phone": {
-        "text": "+65 96346924",
-        "href": "tel:+6596346924"
-    },
     "email": {
-        "text": "hello@phualiangjun.com",
-        "href": "mailto:hello@phualiangjun.com"
+        "text": "phualiangjun@gmail.com",
+        "href": "mailto:phualiangjun@gmail.com"
     },
     "github": {
         "text": "lamesensei.github.io",
@@ -66,15 +62,18 @@
     "education": [
         {
             "title": "Web Development Immersive",
-            "school": "General Assembly (2018)"
+            "school": "General Assembly",
+            "date": 2018
         },
         {
             "title": "Piscine - Basic Coding Bootcamp",
-            "school": "42 US Silicon Valley (2018)"
+            "school": "42 US Silicon Valley",
+            "date": 2018
         },
         {
             "title": "Diploma Information Technology",
-            "school": "Ngee Ann Polytechnic (2008-11)"
+            "school": "Ngee Ann Polytechnic",
+            "date": "2008-11"
         }
     ],
     "skills": {
@@ -84,10 +83,12 @@
             "React",
             "Gatsby",
             "Elixir",
+            "Phoenix",
             "Laravel",
             "PHP",
             "Postgres",
-            "GraphQL"
+            "GraphQL",
+            "Docker"
         ],
         "History": [
             "React Native",

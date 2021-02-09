@@ -14,7 +14,7 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
+    // "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
@@ -40,5 +40,17 @@ module.exports = {
     //     typeName: `Json`,
     //   },
     // },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `JetBrains+Mono`,
+          `Heebo`,
+          `Bebas+Neue`,
+          // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
   ],
 };

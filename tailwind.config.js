@@ -171,30 +171,9 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
-      sans: [
-        "Calibre",
-        "San Francisco",
-        "SF Pro Text",
-        "ui-sans-serif",
-        "system-ui",
-        "-apple-system",
-      ],
-      serif: [
-        "ui-serif",
-        "Georgia",
-        "Cambria",
-        '"Times New Roman"',
-        "Times",
-        "serif",
-      ],
-      mono: [
-        "SF Mono",
-        "Fira Code",
-        "Fira Mono",
-        "Roboto Mono",
-        "ui-monospace",
-        "monospace",
-      ],
+      sans: ["Heebo", "sans-serif"],
+      mono: ["JetBrains Mono", "monospace"],
+      display: ["Bebas Neue", "sans-serif"],
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],

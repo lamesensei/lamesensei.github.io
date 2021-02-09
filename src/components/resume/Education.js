@@ -1,31 +1,33 @@
 import * as React from "react";
-import tw, { css } from "twin.macro";
+import tw, { styled } from "twin.macro";
 
 import { SectionHeader } from "./SharedComponents";
 
-const educationStyles = css`
+const EducationSection = styled.section`
+  ${tw`p-4 border-b`}
   grid-area: education;
+  @media print {
+    ${tw`border-b-0`}
+  }
 `;
-const EducationSection = ({ children }) => (
-  <section tw="p-4 sm:text-right sm:border-t" css={educationStyles}>
-    {children}
-  </section>
-);
 
-// const EducationSection = tw.section`p-4 sm:text-right sm:border-t`;
-const EducationItem = tw.div`mb-1`;
+const EducationItem = tw.div`mb-1 sm:text-gray-300`;
 const School = tw.h5`font-sans font-semibold text-gray-800`;
+const SchoolItem = tw.span`mr-1 inline-block`;
 const Title = tw.h6`font-sans text-gray-600`;
 
 const Education = ({ sectionHeader, education }) => {
   const educationItems = education.map((item) => (
     <EducationItem>
-      <School>{item.school}</School>
+      <School>
+        <SchoolItem>{item.school}</SchoolItem>{" "}
+        <SchoolItem>({item.date})</SchoolItem>
+      </School>
       <Title>{item.title}</Title>
     </EducationItem>
   ));
   return (
-    <EducationSection id="education">
+    <EducationSection>
       <SectionHeader>{sectionHeader}</SectionHeader>
       {educationItems}
     </EducationSection>
