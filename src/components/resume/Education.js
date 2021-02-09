@@ -1,9 +1,18 @@
 import * as React from "react";
-import tw from "twin.macro";
+import tw, { css } from "twin.macro";
 
-import { SectionHeader } from "./SectionHeader";
+import { SectionHeader } from "./SharedComponents";
 
-const EducationSection = tw.section`p-4 row-start-5 sm:row-start-auto sm:text-right sm:col-start-2 sm:col-end-4 sm:border-t`;
+const educationStyles = css`
+  grid-area: education;
+`;
+const EducationSection = ({ children }) => (
+  <section tw="p-4 sm:text-right sm:border-t" css={educationStyles}>
+    {children}
+  </section>
+);
+
+// const EducationSection = tw.section`p-4 sm:text-right sm:border-t`;
 const EducationItem = tw.div`mb-1`;
 const School = tw.h5`font-sans font-semibold text-gray-800`;
 const Title = tw.h6`font-sans text-gray-600`;
@@ -16,7 +25,7 @@ const Education = ({ sectionHeader, education }) => {
     </EducationItem>
   ));
   return (
-    <EducationSection>
+    <EducationSection id="education">
       <SectionHeader>{sectionHeader}</SectionHeader>
       {educationItems}
     </EducationSection>

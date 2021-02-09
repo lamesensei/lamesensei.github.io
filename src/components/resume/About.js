@@ -1,13 +1,22 @@
 import * as React from "react";
-import tw from "twin.macro";
+import tw, { css } from "twin.macro";
 
-import { SectionHeader } from "./SectionHeader";
+import { SectionHeader } from "./SharedComponents";
 
-const AboutSection = tw.section`p-4 sm:border-b sm:border-l row-start-3 sm:row-start-1 sm:col-start-4 sm:col-end-8`;
+const aboutStyles = css`
+  grid-area: about;
+`;
+const AboutSection = ({ children }) => (
+  <section tw="p-4 sm:pr-8 sm:border-b sm:border-l" css={aboutStyles}>
+    {children}
+  </section>
+);
+
+// const AboutSection = tw.section`p-4 sm:pr-8 sm:border-b sm:border-l`;
 const AboutParagraph = tw.p`font-sans text-gray-600`;
 
 const About = ({ sectionHeader, about }) => (
-  <AboutSection>
+  <AboutSection id="about">
     <SectionHeader>{sectionHeader}</SectionHeader>
     <AboutParagraph>{about}</AboutParagraph>
   </AboutSection>

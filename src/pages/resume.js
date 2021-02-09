@@ -1,5 +1,6 @@
 import * as React from "react";
-import tw, { css } from "twin.macro";
+import tw, { css, styled } from "twin.macro";
+import { createGlobalStyle } from "styled-components";
 import { graphql } from "gatsby";
 // import Img from "gatsby-image";
 
@@ -16,16 +17,54 @@ import Experience from "../components/resume/Experience";
 import Education from "../components/resume/Education";
 
 // layout
-const Grid = tw.div`container mx-auto grid grid-cols-1 sm:grid-cols-8 auto-rows-min p-4`;
+const Grid = styled.div`
+  ${tw`p-4 mx-auto`}
+
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-auto-rows: min-content max-content auto;
+  grid-template-areas:
+    "header about"
+    "contact experience"
+    "skills experience"
+    "education experience"
+    ". experience";
+
+  @media only screen and (max-width: 640px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "contact"
+      "about"
+      "skills"
+      "education"
+      "experience";
+  }
+
+  @media print {
+    padding: 0;
+  }
+`;
+
+const PrintStyle = createGlobalStyle`
+@media print {
+  html {
+    margin: 0;
+    font-size: 13px;
+  }
+`;
 
 const Resume = ({ data }) => (
   <Layout>
+    <PrintStyle />
     <Grid>
       <Header
         firstName={resumeData.first_name}
         lastName={resumeData.last_name}
         title={resumeData.title}
       ></Header>
+      <About sectionHeader="About" about={resumeData.about}></About>
       <Contact
         sectionHeader="Contact"
         email={resumeData.email}
@@ -33,15 +72,15 @@ const Resume = ({ data }) => (
         github={resumeData.github}
       ></Contact>
       <Skills sectionHeader="Skills" skills={resumeData.skills}></Skills>
-      <About sectionHeader="About" about={resumeData.about}></About>
-      <Experience
-        sectionHeader="Experience"
-        experiences={resumeData.experiences}
-      ></Experience>
       <Education
         sectionHeader="Education"
         education={resumeData.education}
       ></Education>
+
+      <Experience
+        sectionHeader="Experience"
+        experiences={resumeData.experiences}
+      ></Experience>
     </Grid>
   </Layout>
 );

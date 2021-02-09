@@ -1,10 +1,19 @@
 import * as React from "react";
-import tw from "twin.macro";
+import tw, { css } from "twin.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { SectionHeader } from "./SectionHeader";
+import { SectionHeader } from "./SharedComponents";
 
-const ExperienceSection = tw.section`p-4 sm:row-start-2 sm:row-end-6 sm:col-start-4 sm:col-end-8 sm:border-l`;
+const experienceStyles = css`
+  grid-area: experience;
+`;
+const ExperienceSection = ({ children }) => (
+  <section tw="p-4 sm:pr-8 sm:border-l" css={experienceStyles}>
+    {children}
+  </section>
+);
+
+// const ExperienceSection = tw.section`p-4 sm:pr-8 sm:border-l`;
 const ExperienceItem = tw.div`border p-4 rounded-sm not-first:mt-4 bg-gray-50`;
 const Title = tw.h5`font-semibold tracking-wide text-gray-800 text-lg mr-2`;
 const DateString = tw.span`block sm:inline text-sm font-mono text-gray-600`;
@@ -39,7 +48,7 @@ const Experience = ({ sectionHeader, experiences }) => {
     );
   });
   return (
-    <ExperienceSection>
+    <ExperienceSection id="experience">
       <SectionHeader>{sectionHeader}</SectionHeader>
       {experiencesMap}
     </ExperienceSection>

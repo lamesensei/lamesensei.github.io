@@ -1,5 +1,5 @@
 import * as React from "react";
-import tw from "twin.macro";
+import tw, { css } from "twin.macro";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,15 +8,24 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 
-import { SectionHeader } from "./SectionHeader";
+import { SectionHeader } from "./SharedComponents";
 
-const ContactSection = tw.section`p-4 text-left sm:text-right row-span-1 sm:col-start-2 sm:col-end-4`;
+const contactStyles = css`
+  grid-area: contact;
+`;
+const ContactSection = ({ children }) => (
+  <section tw="p-4 text-left sm:text-right" css={contactStyles}>
+    {children}
+  </section>
+);
+
+// const ContactSection = tw.section`p-4 text-left sm:text-right`;
 const ContactList = tw.ul``;
 const ContactItem = tw.li`text-light-blue-600 flex flex-row-reverse justify-end sm:block`;
 const ContactLink = tw.a`ml-2 sm:mr-2 leading-relaxed`;
 
 const Contact = ({ sectionHeader, email, phone, github }) => (
-  <ContactSection>
+  <ContactSection id="contact">
     <SectionHeader>{sectionHeader}</SectionHeader>
     <ContactList>
       <ContactItem>

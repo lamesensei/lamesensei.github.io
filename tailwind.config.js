@@ -789,7 +789,7 @@ module.exports = {
     boxShadow: ["responsive", "group-hover", "focus-within", "hover", "focus"],
     boxSizing: ["responsive"],
     clear: ["responsive"],
-    container: ["responsive"],
+    container: [],
     cursor: ["responsive"],
     display: ["responsive"],
     divideColor: ["responsive", "dark"],

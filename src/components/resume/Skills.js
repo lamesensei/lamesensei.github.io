@@ -1,9 +1,17 @@
 import * as React from "react";
-import tw from "twin.macro";
+import tw, { css } from "twin.macro";
 
-import { SectionHeader } from "./SectionHeader";
+import { SectionHeader } from "./SharedComponents";
 
-const SkillsSection = tw.section`p-4 text-left sm:text-right sm:col-start-2 sm:col-end-4 sm:border-t`;
+const skillStyles = css`
+  grid-area: skills;
+`;
+const SkillsSection = ({ children }) => (
+  <section tw="p-4 text-left sm:text-right sm:border-t" css={skillStyles}>
+    {children}
+  </section>
+);
+
 const SkillsList = tw.ul`flex flex-wrap sm:justify-end`;
 const SkillItem = tw.li`block text-gray-600 mr-1`;
 
