@@ -13,10 +13,10 @@ const ExperienceSection = styled.section`
 `;
 
 const ExperienceItem = tw.div`border p-4 rounded-sm not-first:mt-4 bg-gray-50`;
-const Title = tw.h5`flex flex-col sm:flex-row items-center`;
+const Title = tw.h5`flex flex-col`;
 const TitleString = tw.span`block font-extrabold tracking-wide text-gray-800 text-lg mr-3`;
 const DateString = tw.span`block font-thin text-sm font-mono text-gray-600 tracking-tight`;
-const Company = tw.h6`font-medium text-gray-600 mb-2 text-center sm:text-left`;
+const Company = tw.h6`font-medium text-gray-600 mb-2`;
 const Description = tw.div`text-sm hidden sm:block font-mono mb-2 bg-gray-200 p-2 rounded-sm`;
 const ResponsibilitiesList = tw.ul`list-disc list-inside`;
 const ResponsibilitiesListItem = tw.li`text-gray-800`;

@@ -77,7 +77,7 @@ const BigFlex = styled.div`
 const PrintJoke = styled.div`
   ${tw`hidden`}
   @media print {
-    ${tw`flex-1 flex items-center justify-center border-t w-full pt-16`}
+    ${tw`flex-1 flex items-center justify-center relative border-t w-full`}
   }
 `;
 
@@ -112,8 +112,7 @@ const Resume = ({ data }) => (
         ></Experience>
       </Grid>
       <PrintJoke>
-        "This space intentionally left blank" ~{" "}
-        <span css={tw``}>Taylor Swift</span>
+        <div css={tw`mt-12`}>Blank Space - Taylor Swift</div>
       </PrintJoke>
     </BigFlex>
   </Layout>

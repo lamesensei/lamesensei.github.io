@@ -12,6 +12,16 @@
     },
     "experiences": [
         {
+            "title": "Junior Software Engineer",
+            "company": "Wego",
+            "date_string": "MAR 21 - PRESENT",
+            "description": "Referred in by a friend. This should be cool.",
+            "responsibilities": [
+                "Part of the cross-functional team behind Wego's Shopcash",
+                "Certified Scrum Master"
+            ]
+        },
+        {
             "title": "Software Engineer",
             "company": "StaffOnDemand Pte Ltd (RecruiterPal)",
             "date_string": "MAR 19 - DEC 20",
@@ -24,7 +34,7 @@
             ]
         },
         {
-            "title": "Instructional Associate (TA)",
+            "title": "Instructional Associate",
             "company": "General Assembly Singapore",
             "date_string": "NOV 18 - MAR 19",
             "description": "My first job as a sensei! Kinda.",
@@ -78,26 +88,24 @@
     ],
     "skills": {
         "Current || Learning": [
-            "Googling",
-            "Javascript",
-            "React",
-            "Gatsby",
             "Elixir",
             "Phoenix",
-            "Laravel",
-            "PHP",
+            "Javascript",
+            "React",
+            "Next.js",
+            "TypeScript",
             "Postgres",
-            "GraphQL",
-            "Docker"
+            "Docker",
+            "Scrum"
         ],
         "History": [
+            "Laravel",
+            "PHP",
             "React Native",
-            "TypeScript",
-            "MobX",
             "Ruby On Rails",
             "Java",
             "C"
         ]
     },
-    "about": " Developer with a proven track record of escaping VIM & standing up during stand-up. Worked previously in a small startup developing enterprise level software. Comfortable handling multiple roles and different programming languages. Currently looking for opportunities to experience the development environment / dynamic of bigger teams."
+    "about": " Developer with a proven track record of escaping VIM & standing up during stand-up. Now upgraded with Scrum Master certification. Currently siphoning the essence of Senior Engineers at Wego to empower himself."
 }
