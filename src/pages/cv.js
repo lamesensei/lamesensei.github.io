@@ -83,7 +83,7 @@ const PrintJoke = styled.div`
 
 const Resume = ({ data }) => (
   <Layout>
-    <Helmet title="plj / resume" defer={false} />
+    <Helmet title="plj / cv" defer={false} />
     <PrintButton />
     <PrintStyle />
     <BigFlex>

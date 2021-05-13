@@ -18,7 +18,7 @@
             "description": "Referred in by a friend. This should be cool.",
             "responsibilities": [
                 "Part of the cross-functional team behind Wego's Shopcash",
-                "Certified Scrum Master"
+                "Currently serving as team's scrum master."
             ]
         },
         {
@@ -87,7 +87,7 @@
         }
     ],
     "skills": {
-        "Current || Learning": [
+        "Learning / Using": [
             "Elixir",
             "Phoenix",
             "Javascript",
@@ -98,7 +98,7 @@
             "Docker",
             "Scrum"
         ],
-        "History": [
+        "Somewhat Forgotten": [
             "Laravel",
             "PHP",
             "React Native",
@@ -107,5 +107,5 @@
             "C"
         ]
     },
-    "about": " Developer with a proven track record of escaping VIM & standing up during stand-up. Now upgraded with Scrum Master certification. Currently siphoning the essence of Senior Engineers at Wego to empower himself."
+    "about": "Polyglot developer who always stands during stand-up meetings. Ensures that the team is on track with the power of his recent certification as Certified Scrum Master®. He is currently siphoning the essence of Senior Engineers at Wego to empower himself. Hopes to one day lead or manage projects."
 }
