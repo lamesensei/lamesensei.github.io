@@ -10,7 +10,7 @@ const App = () => (
   <Layout>
     <Helmet title="plj" defer={false} />
     <Container>
-      <a href="/resume">Resume</a>
+      <a href="/resume">Resume/CV</a>
     </Container>
   </Layout>
 );

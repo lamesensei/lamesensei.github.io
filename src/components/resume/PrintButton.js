@@ -12,7 +12,7 @@ const StyledButton = styled.button`
 
 const PrintButton = () => {
   const print = () => window.print();
-  return <StyledButton onClick={print}>Print Me!</StyledButton>;
+  return <StyledButton onClick={print}>Save PDF</StyledButton>;
 };
 
 export default PrintButton;
