@@ -112,7 +112,7 @@ const Resume = ({ data }) => (
         ></Experience>
       </Grid>
       <PrintJoke>
-        <div css={tw`mt-12`}>Blank Space - Taylor Swift</div>
+        <div css={tw`mt-12 text-gray-100`}>Blank Space - Taylor Swift</div>
       </PrintJoke>
     </BigFlex>
   </Layout>
