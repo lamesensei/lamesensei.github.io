@@ -12,13 +12,13 @@
     },
     "experiences": [
         {
-            "title": "Junior Software Engineer",
+            "title": "Software Engineer II",
             "company": "Wego",
             "date_string": "MAR 21 - PRESENT",
-            "description": "Referred in by a friend. This should be cool.",
+            "description": "Referred by a friend. Learnt Elixir in a month",
             "responsibilities": [
-                "Part of the cross-functional team behind Wego's Shopcash",
-                "Currently serving as team's scrum master."
+                "Develop both API (Elixir) & frontend (Next.JS) features",
+                "Facilitate SCRUM within the team"
             ]
         },
         {
@@ -83,7 +83,7 @@
         {
             "title": "Diploma Information Technology",
             "school": "Ngee Ann Polytechnic",
-            "date": "2008-11"
+            "date": 2011
         }
     ],
     "skills": {
