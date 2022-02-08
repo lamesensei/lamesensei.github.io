@@ -2,3 +2,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body,
+html {
+	@apply dark:bg-slate-800;
+}
+
+h1,
+h3 {
+	@apply dark:text-gray-200;
+}
+
+h6 {
+	@apply dark:text-gray-400;
+}
+
+p,
+div {
+	@apply dark:text-gray-400;
+}
+
+section {
+    @apply dark:border-gray-700;
+}

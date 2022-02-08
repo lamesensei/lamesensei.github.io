@@ -1,24 +1,17 @@
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-
+	// darkMode: 'class',
 	theme: {
 		extend: {
 			gridTemplateAreas: {
-				'resume': [
+				resume: [
 					'header introduction',
 					'contact experience',
 					'skills experience',
 					'education experience',
 					'. experience'
 				],
-				'resume-slim': [
-					"header",
-					"contact",
-					"introduction",
-					"skills",
-					"education",
-					"experience",
-				]
+				'resume-slim': ['header', 'contact', 'introduction', 'skills', 'education', 'experience']
 			},
 			gridTemplateColumns: {
 				resume: '3fr 7fr'
