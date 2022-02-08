@@ -1,5 +1,3 @@
-## TODO
+# Hello There
 
-- React helmet
-- Work on homepage
-- Clean up fonts
+You won't find much here.
