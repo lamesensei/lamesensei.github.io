@@ -1,31 +1,31 @@
+import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { NextPage } from "next";
+import { useEffect, useState } from "react";
 import { ItemHeader } from "../components/ItemHeader";
 import { SectionHeader } from "../components/SectionHeader";
 import { SectionSubHeader } from "../components/SectionSubHeader";
 import { SkillBadge } from "../components/SkillBadge";
 import { Text } from "../components/Text";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
-import { useEffect, useState } from "react";
 
-const FIVE_SECOND_DELAY = 5000;
+const ONE_SECOND = 1000;
 
 const Home: NextPage = () => {
   const [delayRender, setDelayRender] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setDelayRender(false), FIVE_SECOND_DELAY);
+    setTimeout(() => setDelayRender(false), ONE_SECOND);
   });
 
   return (
-    <main className="p-4 flex flex-col items-center flex-1 h-screen relative">
+    <main className="p-4 flex flex-col items-center flex-1 relative">
       <button
         onClick={() => window.print()}
         className="absolute top-4 right-4 bg-black text-white font-medium border rounded text-sm py-1 px-1.5 border-black print:hidden"
       >
         Print Me
       </button>
-      <div className="max-w-3xl">
+      <div className="max-w-3xl mb-8">
         {/* Header */}
         <section className="bg-white border-b pb-4 flex flex-col md:flex-row print:flex-row space-between">
           <div>
@@ -135,6 +135,13 @@ const Home: NextPage = () => {
             <section className="border-b py-4 print:p-4 print:pl-0 lg:p-4 lg:pl-0">
               <SectionHeader>Education</SectionHeader>
               <ul className="mt-2">
+              <li className="mb-4">
+                  <ItemHeader
+                    header="Scrum Alliance"
+                    subHeader="Certified Scrum Master"
+                    dateTime="2021"
+                  />
+                </li>
                 <li className="mb-4">
                   <ItemHeader
                     header="General Assembly"
@@ -289,7 +296,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <footer className="print:absolute print:bottom-0 print:m-0 print:p-0 mt-8 p-4">
+      <footer className="print:absolute print:bottom-0 print:m-0 print:p-0 p-4">
         <Text className="text-center text-xs font-mono text-gray-300 print:text-gray-200">
           Built with &#9829; and for fun with Next.js & Tailwind CSS
         </Text>
