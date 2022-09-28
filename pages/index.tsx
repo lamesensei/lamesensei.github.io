@@ -29,7 +29,7 @@ const Home: NextPage = () => {
       >
         Print Me
       </button>
-      <div className="max-w-3xl mb-8">
+      <div className="max-w-3xl min-w-min mb-8">
         {/* Header */}
         <section className="bg-white border-b pb-4 flex flex-col md:flex-row print:flex-row space-between">
           <div>
@@ -46,18 +46,25 @@ const Home: NextPage = () => {
                   href="https://www.linkedin.com/in/phualiangjun/"
                   target="_blank"
                   rel="noreferrer"
-                  className=""
+                  className="flex justify-start items-center lg:justify-end print:justify-end"
                 >
-                  /phualiangjun
-                  <i className="devicon-linkedin-plain colored ml-1"></i>
+                  <Text className="order-2 lg:order-0">/phualiangjun</Text>
+                  <i className="devicon-linkedin-plain colored mx-1 order-1"></i>
                 </a>
               </li>
               <li>
-                <a href={!delayRender ? "tel:+6596346924" : ""}>
-                  {!delayRender ? "+65 96346924" : "redacted..."}
+                <a
+                  href={!delayRender ? "tel:+6596346924" : ""}
+                  className="flex justify-start items-center lg:justify-end print:justify-end"
+                >
+                  {!delayRender ? (
+                    <Text className="order-2 lg:order-0">+65 96346924</Text>
+                  ) : (
+                    <Text className="order-2 lg:order-0">redacted...</Text>
+                  )}
                   <FontAwesomeIcon
                     icon={faWhatsappSquare}
-                    className="text-green-600 ml-1"
+                    className="text-green-600 mx-1 order-1"
                   />
                 </a>
               </li>
@@ -65,7 +72,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <div className="print:flex lg:flex">
-        <div className="py-4 print:p-4 print:pl-0 print:border-r lg:p-4 lg:pl-0 lg:border-r border-b print:border-b-0 lg:border-b-0">
+          <div className="py-4 print:p-4 print:pl-0 print:border-r lg:p-4 lg:pl-0 lg:border-r border-b print:border-b-0 lg:border-b-0">
             {/* Experience */}
             <section className="">
               <SectionHeader>Experience</SectionHeader>
@@ -265,7 +272,7 @@ const Home: NextPage = () => {
             <section className="border-b py-4 print:p-4 print:pr-0 lg:p-4 lg:pr-0">
               <SectionHeader>Education</SectionHeader>
               <ul className="mt-2">
-              <li className="mb-4">
+                <li className="mb-4">
                   <ItemHeader
                     header="Scrum Alliance"
                     subHeader="Certified Scrum Master"
