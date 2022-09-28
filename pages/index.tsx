@@ -1,235 +1,217 @@
 import type { NextPage } from "next";
+import { ItemHeader } from "../components/ItemHeader";
+import { SectionHeader } from "../components/SectionHeader";
+import { SectionSubHeader } from "../components/SectionSubHeader";
+import { SkillBadge } from "../components/SkillBadge";
+import { Text } from "../components/Text";
 
 const Home: NextPage = () => {
   return (
     <main className="flex justify-center">
       <div className="font-sans p-4 flex flex-col gap-4">
-        <section className="border flex-1 p-4 border-1 border-black">
-          <h1 className="font-bold">Phua Liang Jun</h1>
-          <p>Full-Stack Software Engineer</p>
+        {/* Header */}
+        <section className="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
+          <SectionHeader>Phua Liang Jun</SectionHeader>
+          <SectionSubHeader>Full-Stack Software Engineer</SectionSubHeader>
         </section>
-        <section className="border flex-1 p-4 border-1 border-black">
-          <p>I press keyboard for muny.</p>
+        {/* About */}
+        <section className="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
+          <SectionHeader>About</SectionHeader>
+          <Text>I press keyboard for muny.</Text>
         </section>
-        <section className="border flex-1 p-4 border-1 border-black">
-          <h2 className="font-bold">Skills</h2>
+        {/* Skills */}
+        <section className="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
+          <SectionHeader>Skills</SectionHeader>
           <div className="mb-2">
-            <h3 className="text-gray-600 mb-1">Languages</h3>
-            <ul className="list-disc">
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-typescript-plain colored"></i>
-                <span className="inline-block text-sm">Typescript/Javascript</span>
-              </li>
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-elixir-plain colored"></i>
-                <span className="inline-block text-sm">Elixir</span>
-              </li>
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-php-plain colored"></i>
-                <span className="inline-block text-sm">PHP</span>
-              </li>
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-sass-original colored"></i>
-                <span className="inline-block text-sm">SASS/SCSS</span>
-              </li>
+            <SectionSubHeader>Languages</SectionSubHeader>
+            <ul className="">
+              <SkillBadge
+                icon="devicon-typescript-plain colored"
+                text="Typescript/Javascript"
+              />
+              <SkillBadge icon="devicon-elixir-plain colored" text="Elixir" />
+              <SkillBadge icon="devicon-php-plain colored" text="PHP" />
+              <SkillBadge icon=" devicon-sass-original colored" text="SASS" />
             </ul>
           </div>
           <div className="mb-2">
-            <h3 className="text-gray-600 mb-1">Frameworks, Libraries & Runtimes</h3>
-            <ul className="list-disc">
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-react-original colored"></i>
-                <span className="inline-block text-sm">React</span>
-              </li>
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-nodejs-plain-wordmark"></i>
-                <span className="inline-block text-sm">Node</span>
-              </li>
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-express-original colored"></i>
-                <span className="inline-block text-sm">Express</span>
-              </li>
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-nextjs-original colored"></i>
-                <span className="inline-block text-sm">Next.js</span>
-              </li>
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-nestjs-plain colored"></i>
-                <span className="inline-block text-sm">Nest.js</span>
-              </li>
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-phoenix-plain colored"></i>
-                <span className="inline-block text-sm">Phoenix</span>
-              </li>
+            <SectionSubHeader>
+              Frameworks, Libraries & Runtimes
+            </SectionSubHeader>
+            <ul className="">
+              <SkillBadge icon="devicon-react-original colored" text="React" />
+              <SkillBadge icon="devicon-nodejs-plain colored" text="Node" />
+              <SkillBadge
+                icon="devicon-express-original colored"
+                text="Express"
+              />
+              <SkillBadge
+                icon="devicon-nextjs-original colored"
+                text="Next.js"
+              />
+              <SkillBadge icon="devicon-nestjs-plain colored" text="Nest.js" />
+              <SkillBadge icon="devicon-phoenix-plain colored" text="Phoenix" />
             </ul>
           </div>
           <div className="">
-            <h3 className="text-gray-600 mb-1">DevOps, Tooling & Databases</h3>
-            <ul className="list-disc">
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-docker-plain colored"></i>
-                <span className="inline-block text-sm">Docker</span>
-              </li>
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-terraform-plain colored"></i>
-                <span className="inline-block text-sm">Terraform</span>
-              </li>
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-amazonwebservices-original colored"></i>
-                <span className="inline-block text-sm">AWS</span>
-              </li>
-              <li className="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-0.5 text-sm font-medium text-gray-800 m-1 font-mono">
-                <i className="inline-block mr-2 devicon-postgresql-plain colored"></i>
-                <span className="inline-block text-sm">Postgres</span>
-              </li>
+            <SectionSubHeader>DevOps, Tooling & Databases</SectionSubHeader>
+            <ul className="">
+              <SkillBadge icon="devicon-docker-plain colored" text="Docker" />
+              <SkillBadge
+                icon="devicon-terraform-plain colored"
+                text="Terraform"
+              />
+              <SkillBadge
+                icon="devicon-amazonwebservices-plain colored"
+                text="AWS"
+              />
+              <SkillBadge
+                icon="devicon-postgresql-plain colored"
+                text="Postgres"
+              />
             </ul>
           </div>
         </section>
-        <section className="border flex-1 p-4 border-1 border-black">
-          <ul>
-            <h5 className="text-sm text-gray-600">2018</h5>
-            <li className="mb-2">
-              <h3 className="font-bold">General Assembly</h3>
-              <h4 className="text-sm text-gray-700">
-                Web Development Intensive (WDI-16) Boot Camp
-              </h4>
+        {/* Experience */}
+        <section className="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
+          <SectionHeader>Education</SectionHeader>
+          <ul className="mt-2">
+            <li className="mb-4">
+              <ItemHeader
+                header="General Assembly"
+                subHeader="Web Development Intensive (WDI-16) Boot Camp"
+                dateTime="2018"
+              />
+              {/* TODO: Add education image and timeline */}
+              {/* <span className="border-l ml-32 my-2"></span> */}
+            </li>
+            <li className="mb-4">
+            <ItemHeader
+                header="42 Silicon Valley"
+                subHeader="Piscine Boot Camp"
+                dateTime="2018"
+              />
             </li>
             <li className="mb-2">
-              <h3 className="font-bold">42 Silicon Valley</h3>
-              <h4 className="text-sm text-gray-700">Piscine (Boot Camp)</h4>
-            </li>
-            <h5 className="text-sm text-gray-600">2008</h5>
-            <li className="mb-2">
-              <h3 className="font-bold">Ngee Ann Polytechnic</h3>
-              <h4 className="text-sm text-gray-700">
-                Diploma in Information Technology
-              </h4>
+            <ItemHeader
+                header="Ngee Ann Polytechnic"
+                subHeader="Diploma in Information Technology"
+                dateTime="2011"
+              />
             </li>
           </ul>
         </section>
-        <section className="border flex-1 p-4 border-1 border-black">
+        {/*  */}
+        <section className="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
           <ul>
             <li className="mb-2">
               <h5>Jan 2022 - Sep 2022</h5>
-              <h3 className="font-bold">Hodlnaut</h3>
+              <h3 className="font-medium">Hodlnaut</h3>
               <h4>Software Engineer</h4>
-              <p className="text-sm">
-                <ul>
-                  <li>
-                    - Developed new features in Node.js & React for flagship
-                    Crypto Lending product
-                  </li>
-                  <li>
-                    - Developed new features in back office CMS for Compliance
-                    (KYC) and Customer Support
-                  </li>
-                  <li>
-                    - Developed Dynamic Configuration Service which sped up
-                    feature deployments by up to 95%
-                  </li>
-                  <li>
-                    - Created Prisma library service for other microservices to
-                    utilize PostgresSQL
-                  </li>
-                  <li>
-                    - Experimented with different workflow processes to improve
-                    productivity (Agile, Scrum, Shape Up)
-                  </li>
-                  <li>- Handled Devops via Terraform, Docker and AWS</li>
-                  <li>
-                    - Worked on prototype Exchange product with Nest JS and
-                    Next.js
-                  </li>
-                  <li>
-                    - Diagnosed and triaged production or transaction
-                    (Fireblocks) issues as Duty Engineer
-                  </li>
-                </ul>
-              </p>
+              <ul>
+                <li>
+                  - Developed new features in Node.js & React for flagship
+                  Crypto Lending product
+                </li>
+                <li>
+                  - Developed new features in back office CMS for Compliance
+                  (KYC) and Customer Support
+                </li>
+                <li>
+                  - Developed Dynamic Configuration Service which sped up
+                  feature deployments by up to 95%
+                </li>
+                <li>
+                  - Created Prisma library service for other microservices to
+                  utilize PostgresSQL
+                </li>
+                <li>
+                  - Experimented with different workflow processes to improve
+                  productivity (Agile, Scrum, Shape Up)
+                </li>
+                <li>- Handled Devops via Terraform, Docker and AWS</li>
+                <li>
+                  - Worked on prototype Exchange product with Nest JS and
+                  Next.js
+                </li>
+                <li>
+                  - Diagnosed and triaged production or transaction (Fireblocks)
+                  issues as Duty Engineer
+                </li>
+              </ul>
             </li>
             <li className="mb-2">
-              <h5></h5>
-              <h3 className="font-bold">Wego</h3>
+              <h5>Mar 2021 - Jan 2022</h5>
+              <h3 className="font-medium">Wego</h3>
               <h4>Software Engineer / Scrum Master</h4>
-              <p className="text-sm">
-                <ul>
-                  <li>
-                    - Developed new features for Shopback Cashback app in Elixir
-                    and Next.js
-                  </li>
-                  <li>
-                    - Facilitated Sprint plannings and retrospective as Scrum
-                    Master
-                  </li>
-                  <li>
-                    - Assisted Product owner in managing Jira and Confluence
-                  </li>
-                  <li>
-                    - Worked on modifying legacy systems in Ruby for integration
-                    in Elixir
-                  </li>
-                  <li>
-                    - Participated in cross product meetings to identify
-                    blockers
-                  </li>
-                </ul>
-              </p>
+              <ul>
+                <li>
+                  - Developed new features for Shopback Cashback app in Elixir
+                  and Next.js
+                </li>
+                <li>
+                  - Facilitated Sprint plannings and retrospective as Scrum
+                  Master
+                </li>
+                <li>
+                  - Assisted Product owner in managing Jira and Confluence
+                </li>
+                <li>
+                  - Worked on modifying legacy systems in Ruby for integration
+                  in Elixir
+                </li>
+                <li>
+                  - Participated in cross product meetings to identify blockers
+                </li>
+              </ul>
             </li>
             <li className="mb-2">
-              <h5></h5>
-              <h3 className="font-bold">StaffOnDemand / Recruiter Pal</h3>
+              <h5>Mar 2019 - Dec 2020</h5>
+              <h3 className="font-medium">StaffOnDemand / Recruiter Pal</h3>
               <h4>Web Developer</h4>
-              <p className="text-sm">
-                <ul>
-                  <li>
-                    - Develop new features for Recruiter Pal ATS in Laravel
-                    (PHP) and Angular JS
-                  </li>
-                  <li>
-                    - Prototype Mobile App in React Native for investor pitch
-                  </li>
-                </ul>
-              </p>
+              <ul>
+                <li>
+                  - Develop new features for Recruiter Pal ATS in Laravel (PHP)
+                  and Angular JS
+                </li>
+                <li>
+                  - Prototype Mobile App in React Native for investor pitch
+                </li>
+              </ul>
             </li>
             <li className="mb-2">
-              <h5></h5>
-              <h3 className="font-bold">General Assembly</h3>
+              <h5>Nov 2018 - Mar 2019</h5>
+              <h3 className="font-medium">General Assembly</h3>
               <h4>Instructional Associate</h4>
-              <p className="text-sm">
-                <ul>
-                  <li>
-                    - Assisted lead instructor with class administration and
-                    lessons
-                  </li>
-                  <li>- Helped students with their queries and assignments</li>
-                </ul>
-              </p>
+              <ul>
+                <li>
+                  - Assisted lead instructor with class administration and
+                  lessons
+                </li>
+                <li>- Helped students with their queries and assignments</li>
+              </ul>
             </li>
             <li className="mb-2">
-              <h5></h5>
-              <h3 className="font-bold">ST Electronics</h3>
+              <h5>Nov 2016 - Dec 2017</h5>
+              <h3 className="font-medium">ST Electronics</h3>
               <h4>Associate Engineer (Transmission Systems)</h4>
-              <p className="text-sm">
-                <ul>
-                  <li>- Responded to network incidents as L2 Support</li>
-                  <li>- Key Man for Network Management System issues </li>
-                  <li>- Assist vendors with equipment deployments on site</li>
-                </ul>
-              </p>
+              <ul>
+                <li>- Responded to network incidents as L2 Support</li>
+                <li>- Key Man for Network Management System issues </li>
+                <li>- Assist vendors with equipment deployments on site</li>
+              </ul>
             </li>
             <li className="mb-2">
-              <h5></h5>
-              <h3 className="font-bold">Singapore Armed Forces</h3>
+              <h5>2011 - 2016</h5>
+              <h3 className="font-medium">Singapore Armed Forces</h3>
               <h4>Military Intelligence Engineer</h4>
-              <p className="text-sm">
-                <ul>
-                  <li>- Responded to network incidents as L1 Support</li>
-                  <li>
-                    - Escorted external contractors in secure locations for
-                    equipment deployments
-                  </li>
-                </ul>
-              </p>
+              <ul>
+                <li>- Responded to network incidents as L1 Support</li>
+                <li>
+                  - Escorted external contractors in secure locations for
+                  equipment deployments
+                </li>
+              </ul>
             </li>
           </ul>
         </section>
