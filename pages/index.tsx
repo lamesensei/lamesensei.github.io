@@ -18,14 +18,14 @@ const Home: NextPage = () => {
   });
 
   return (
-    <main className="p-4 flex flex-col items-center flex-1 h-screen relative">
+    <main className="p-4 flex flex-col items-center flex-1 relative">
       <button
         onClick={() => window.print()}
         className="absolute top-4 right-4 bg-black text-white font-medium border rounded text-sm py-1 px-1.5 border-black print:hidden"
       >
         Print Me
       </button>
-      <div className="max-w-3xl">
+      <div className="max-w-3xl mb-8">
         {/* Header */}
         <section className="bg-white border-b pb-4 flex flex-col md:flex-row print:flex-row space-between">
           <div>
@@ -289,7 +289,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <footer className="print:absolute print:bottom-0 print:m-0 print:p-0 mt-8 p-4">
+      <footer className="print:absolute print:bottom-0 print:m-0 print:p-0 p-4">
         <Text className="text-center text-xs font-mono text-gray-300 print:text-gray-200">
           Built with &#9829; and for fun with Next.js & Tailwind CSS
         </Text>
