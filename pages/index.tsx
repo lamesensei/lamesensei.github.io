@@ -6,13 +6,21 @@ import { SkillBadge } from "../components/SkillBadge";
 import { Text } from "../components/Text";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useState } from "react";
+
+const FIVE_SECOND_DELAY = 5000;
 
 const Home: NextPage = () => {
+  const [delayRender, setDelayRender] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setDelayRender(false), FIVE_SECOND_DELAY);
+  });
+
   return (
-    <main className="p-4 flex justify-center flex-1">
+    <main className="p-4 flex flex-col items-center flex-1 h-screen">
       <div className="max-w-3xl">
         {/* Header */}
-        <section className="border-b py-4 flex space-between">
+        <section className="border-b py-4 flex flex-col md:flex-row print:flex-row space-between">
           <div>
             <SectionHeader>Phua Liang Jun</SectionHeader>
             <SectionSubHeader>Full-Stack Software Engineer</SectionSubHeader>
@@ -20,7 +28,7 @@ const Home: NextPage = () => {
               Likes keeping things simple -- whether it be code or processes
             </Text>
           </div>
-          <div className="flex-1 text-sm text-right text-gray-600">
+          <div className="flex-1 text-sm md:text-right mt-2 md:mt-0 text-gray-500 print:text-right print:mt-0">
             <ul>
               <li>
                 <a
@@ -34,9 +42,12 @@ const Home: NextPage = () => {
                 </a>
               </li>
               <li>
-                <a href="tel:+6596346924">
-                  +65 96346924
-                  <FontAwesomeIcon icon={faWhatsappSquare} className="text-green-600 ml-1" />
+                <a href={!delayRender ? "tel:+6596346924" : ""}>
+                  {!delayRender ? "+65 96346924" : "redacted 5 secs"}
+                  <FontAwesomeIcon
+                    icon={faWhatsappSquare}
+                    className="text-green-600 ml-1"
+                  />
                 </a>
               </li>
             </ul>
@@ -271,6 +282,11 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <footer className="print:absolute print:bottom-0 print:m-0 print:p-0 mt-8 p-4">
+        <Text className="text-center text-xs font-mono text-gray-300 print:text-gray-200">
+          Built with &#9829; and for fun with Next.js & Tailwind CSS
+        </Text>
+      </footer>
     </main>
   );
 };
