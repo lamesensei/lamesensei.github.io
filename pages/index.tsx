@@ -50,7 +50,7 @@ const Home: NextPage = () => {
               </li>
               <li>
                 <a href={!delayRender ? "tel:+6596346924" : ""}>
-                  {!delayRender ? "+65 96346924" : "redacted 5 secs"}
+                  {!delayRender ? "+65 96346924" : "redacted..."}
                   <FontAwesomeIcon
                     icon={faWhatsappSquare}
                     className="text-green-600 ml-1"
@@ -61,114 +61,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <div className="print:flex lg:flex">
-          <div className="print:w-3/5 lg:w-1/3">
-            {/* Skills */}
-            <section className="border-b py-4 print:p-4 print:pl-0 lg:p-4 lg:pl-0">
-              <SectionHeader>Skills</SectionHeader>
-              <div className="mb-2">
-                <SectionSubHeader>Languages</SectionSubHeader>
-                <ul className="">
-                  <SkillBadge
-                    icon="devicon-typescript-plain colored"
-                    text="Typescript"
-                  />
-                  <SkillBadge
-                    icon="devicon-elixir-plain colored"
-                    text="Elixir"
-                  />
-                  <SkillBadge icon="devicon-php-plain colored" text="PHP" />
-                  <SkillBadge
-                    icon=" devicon-sass-original colored"
-                    text="SASS"
-                  />
-                </ul>
-              </div>
-              <div className="mb-2">
-                <SectionSubHeader>Frameworks & Libraries</SectionSubHeader>
-                <ul className="">
-                  <SkillBadge
-                    icon="devicon-react-original colored"
-                    text="React"
-                  />
-                  <SkillBadge icon="devicon-nodejs-plain colored" text="Node" />
-                  <SkillBadge
-                    icon="devicon-express-original colored"
-                    text="Express"
-                  />
-                  <SkillBadge
-                    icon="devicon-nextjs-original colored"
-                    text="Next.js"
-                  />
-                  <SkillBadge
-                    icon="devicon-nestjs-plain colored"
-                    text="Nest.js"
-                  />
-                  <SkillBadge
-                    icon="devicon-phoenix-plain colored"
-                    text="Phoenix"
-                  />
-                </ul>
-              </div>
-              <div className="">
-                <SectionSubHeader>DevOps & Databases</SectionSubHeader>
-                <ul className="">
-                  <SkillBadge
-                    icon="devicon-docker-plain colored"
-                    text="Docker"
-                  />
-                  <SkillBadge
-                    icon="devicon-terraform-plain colored"
-                    text="Terraform"
-                  />
-                  <SkillBadge
-                    icon="devicon-amazonwebservices-plain colored"
-                    text="AWS"
-                  />
-                  <SkillBadge
-                    icon="devicon-postgresql-plain colored"
-                    text="Postgres"
-                  />
-                </ul>
-              </div>
-            </section>
-            {/* Education */}
-            <section className="border-b py-4 print:p-4 print:pl-0 lg:p-4 lg:pl-0">
-              <SectionHeader>Education</SectionHeader>
-              <ul className="mt-2">
-              <li className="mb-4">
-                  <ItemHeader
-                    header="Scrum Alliance"
-                    subHeader="Certified Scrum Master"
-                    dateTime="2021"
-                  />
-                </li>
-                <li className="mb-4">
-                  <ItemHeader
-                    header="General Assembly"
-                    subHeader="Web Development Intensive"
-                    dateTime="2018"
-                  />
-                  {/* TODO: Add education image and timeline */}
-                  {/* <span className="border-l ml-32 my-2"></span> */}
-                </li>
-                <li className="mb-4">
-                  <ItemHeader
-                    header="42 Silicon Valley"
-                    subHeader="Piscine Boot Camp"
-                    dateTime="2018"
-                  />
-                </li>
-                <li className="mb-2">
-                  <ItemHeader
-                    header="Ngee Ann Polytechnic"
-                    subHeader="Diploma in Information Technology"
-                    dateTime="2011"
-                  />
-                </li>
-              </ul>
-            </section>
-          </div>
-          <div className="py-4 print:p-4 print:pr-0 print:border-l lg:p-4 lg:pr-0 lg:border-l">
+        <div className="py-4 print:p-4 print:pl-0 print:border-r lg:p-4 lg:pl-0 lg:border-r">
             {/* Experience */}
             <section className="">
               <SectionHeader>Experience</SectionHeader>
@@ -294,6 +187,117 @@ const Home: NextPage = () => {
               </ul>
             </section>
           </div>
+          <div className="w-full print:w-1/2 lg:w-1/2">
+            {/* Skills */}
+            <section className="border-b py-4 print:p-4 print:pr-0 lg:p-4 lg:pr-0">
+              <SectionHeader>Skills</SectionHeader>
+              <div className="mb-2">
+                <SectionSubHeader>Languages</SectionSubHeader>
+                <ul className="">
+                  <SkillBadge
+                    icon="devicon-typescript-plain colored"
+                    text="Typescript"
+                  />
+                  <SkillBadge
+                    icon="devicon-elixir-plain colored"
+                    text="Elixir"
+                  />
+                  <SkillBadge icon="devicon-php-plain colored" text="PHP" />
+                  <SkillBadge
+                    icon=" devicon-sass-original colored"
+                    text="SASS"
+                  />
+                </ul>
+              </div>
+              <div className="mb-2">
+                <SectionSubHeader>Frameworks & Libraries</SectionSubHeader>
+                <ul className="">
+                  <SkillBadge
+                    icon="devicon-react-original colored"
+                    text="React"
+                  />
+                  <SkillBadge icon="devicon-nodejs-plain colored" text="Node" />
+                  <SkillBadge
+                    icon="devicon-express-original colored"
+                    text="Express"
+                  />
+                  <SkillBadge
+                    icon="devicon-nextjs-original colored"
+                    text="Next.js"
+                  />
+                  <SkillBadge
+                    icon="devicon-nestjs-plain colored"
+                    text="Nest.js"
+                  />
+                  <SkillBadge
+                    icon="devicon-phoenix-plain colored"
+                    text="Phoenix"
+                  />
+                </ul>
+              </div>
+              <div className="">
+                <SectionSubHeader>DevOps & Databases</SectionSubHeader>
+                <ul className="">
+                  <SkillBadge
+                    icon="devicon-docker-plain colored"
+                    text="Docker"
+                  />
+                  <SkillBadge
+                    icon="devicon-terraform-plain colored"
+                    text="Terraform"
+                  />
+                  <SkillBadge
+                    icon="devicon-amazonwebservices-plain colored"
+                    text="AWS"
+                  />
+                  <SkillBadge
+                    icon="devicon-postgresql-plain colored"
+                    text="Postgres"
+                  />
+                </ul>
+              </div>
+            </section>
+            {/* Education */}
+            <section className="border-b py-4 print:p-4 print:pr-0 lg:p-4 lg:pr-0">
+              <SectionHeader>Education</SectionHeader>
+              <ul className="mt-2">
+              <li className="mb-4">
+                  <ItemHeader
+                    header="Scrum Alliance"
+                    subHeader="Certified Scrum Master"
+                    dateTime="2021"
+                  />
+                </li>
+                <li className="mb-4">
+                  <ItemHeader
+                    header="General Assembly"
+                    subHeader="Web Development Intensive"
+                    dateTime="2018"
+                  />
+                  {/* TODO: Add education image and timeline */}
+                  {/* <span className="border-l ml-32 my-2"></span> */}
+                </li>
+                <li className="mb-4">
+                  <ItemHeader
+                    header="42 Silicon Valley"
+                    subHeader="Piscine Boot Camp"
+                    dateTime="2018"
+                  />
+                </li>
+                <li className="mb-2">
+                  <ItemHeader
+                    header="Ngee Ann Polytechnic"
+                    subHeader="Diploma in Information Technology"
+                    dateTime="2011"
+                  />
+                </li>
+              </ul>
+            </section>
+            <section className="hidden print:block py-4 print:p-4 print:pr-0 lg:p-4 lg:pr-0">
+              <SectionHeader>Notes</SectionHeader>
+            </section>
+          </div>
+ 
         </div>
       </div>
       <footer className="print:absolute print:bottom-0 print:m-0 print:p-0 p-4">
