@@ -47,7 +47,7 @@ const Home: NextPage = () => {
                   href="https://www.linkedin.com/in/phualiangjun/"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex justify-start items-center lg:justify-end print:justify-end"
+                  className="flex justify-start items-center lg:justify-end print:justify-end lg:py-0 py-1"
                 >
                   <Text className="order-2 print:order-1 lg:order-1">
                     /phualiangjun
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
               <li>
                 <a
                   href="mailto:resume@phualiangjun.com"
-                  className="flex justify-start items-center lg:justify-end print:justify-end"
+                  className="flex justify-start items-center lg:justify-end print:justify-end lg:py-0 py-1"
                 >
                   <Text className="order-2 print:order-1 lg:order-1">
                     hello@phualiangjun.com
@@ -71,8 +71,8 @@ const Home: NextPage = () => {
               </li>
               <li>
                 <a
-                  href={isOpen ? "tel:+6596346924" : ""}
-                  className="flex justify-start items-center lg:justify-end print:justify-end"
+                  href={isOpen ? "tel:+6596346924" : "/"}
+                  className="flex justify-start items-center lg:justify-end print:justify-end lg:py-0 py-1"
                 >
                   {isOpen ? (
                     <Text className="order-2 print:order-1 lg:order-1">
@@ -117,6 +117,7 @@ const Home: NextPage = () => {
                       Introduced PostgreSQL to database stack by implementing
                       Prisma Library service
                     </li>
+                    <li>Developed PDF Statements Feature</li>
                     <li>
                       Experimented with different workflow processes to improve
                       productivity (Scrum, Shape Up)
