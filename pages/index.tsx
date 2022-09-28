@@ -1,20 +1,20 @@
+import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { NextPage } from "next";
+import { useEffect, useState } from "react";
 import { ItemHeader } from "../components/ItemHeader";
 import { SectionHeader } from "../components/SectionHeader";
 import { SectionSubHeader } from "../components/SectionSubHeader";
 import { SkillBadge } from "../components/SkillBadge";
 import { Text } from "../components/Text";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
-import { useEffect, useState } from "react";
 
-const FIVE_SECOND_DELAY = 5000;
+const ONE_SECOND = 1000;
 
 const Home: NextPage = () => {
   const [delayRender, setDelayRender] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setDelayRender(false), FIVE_SECOND_DELAY);
+    setTimeout(() => setDelayRender(false), ONE_SECOND);
   });
 
   return (
@@ -135,6 +135,13 @@ const Home: NextPage = () => {
             <section className="border-b py-4 print:p-4 print:pl-0 lg:p-4 lg:pl-0">
               <SectionHeader>Education</SectionHeader>
               <ul className="mt-2">
+              <li className="mb-4">
+                  <ItemHeader
+                    header="Scrum Alliance"
+                    subHeader="Certified Scrum Master"
+                    dateTime="2021"
+                  />
+                </li>
                 <li className="mb-4">
                   <ItemHeader
                     header="General Assembly"
