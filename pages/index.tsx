@@ -72,7 +72,7 @@ const Home: NextPage = () => {
             </ul>
           </div>
         </section>
-        {/* Experience */}
+        {/* Education */}
         <section className="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
           <SectionHeader>Education</SectionHeader>
           <ul className="mt-2">
@@ -86,14 +86,14 @@ const Home: NextPage = () => {
               {/* <span className="border-l ml-32 my-2"></span> */}
             </li>
             <li className="mb-4">
-            <ItemHeader
+              <ItemHeader
                 header="42 Silicon Valley"
                 subHeader="Piscine Boot Camp"
                 dateTime="2018"
               />
             </li>
             <li className="mb-2">
-            <ItemHeader
+              <ItemHeader
                 header="Ngee Ann Polytechnic"
                 subHeader="Diploma in Information Technology"
                 dateTime="2011"
@@ -101,116 +101,141 @@ const Home: NextPage = () => {
             </li>
           </ul>
         </section>
-        {/*  */}
+        {/* Experience */}
         <section className="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
-          <ul>
-            <li className="mb-2">
-              <h5>Jan 2022 - Sep 2022</h5>
-              <h3 className="font-medium">Hodlnaut</h3>
-              <h4>Software Engineer</h4>
+          <SectionHeader>Experience</SectionHeader>
+          <ul className="mt-2">
+            <li className="mb-4">
+              <ItemHeader
+                header="Hodlnaut"
+                subHeader="Software Engineer"
+                dateTime="Jan 2022 - Sep 2022"
+              ></ItemHeader>
               <ul>
-                <li>
+                <li className="text-sm">
                   - Developed new features in Node.js & React for flagship
                   Crypto Lending product
                 </li>
-                <li>
+                <li className="text-sm">
                   - Developed new features in back office CMS for Compliance
                   (KYC) and Customer Support
                 </li>
-                <li>
+                <li className="text-sm">
                   - Developed Dynamic Configuration Service which sped up
                   feature deployments by up to 95%
                 </li>
-                <li>
+                <li className="text-sm">
                   - Created Prisma library service for other microservices to
                   utilize PostgresSQL
                 </li>
-                <li>
+                <li className="text-sm">
                   - Experimented with different workflow processes to improve
                   productivity (Agile, Scrum, Shape Up)
                 </li>
-                <li>- Handled Devops via Terraform, Docker and AWS</li>
-                <li>
+                <li className="text-sm">
+                  - Handled Devops via Terraform, Docker and AWS
+                </li>
+                <li className="text-sm">
                   - Worked on prototype Exchange product with Nest JS and
                   Next.js
                 </li>
-                <li>
+                <li className="text-sm">
                   - Diagnosed and triaged production or transaction (Fireblocks)
                   issues as Duty Engineer
                 </li>
               </ul>
             </li>
-            <li className="mb-2">
-              <h5>Mar 2021 - Jan 2022</h5>
-              <h3 className="font-medium">Wego</h3>
-              <h4>Software Engineer / Scrum Master</h4>
+            <li className="mb-4">
+              <ItemHeader
+                header="Wego"
+                subHeader="Software Engineer / Scrum Master"
+                dateTime="Mar 2021 - Jan 2022"
+              ></ItemHeader>
               <ul>
-                <li>
+                <li className="text-sm">
                   - Developed new features for Shopback Cashback app in Elixir
                   and Next.js
                 </li>
-                <li>
+                <li className="text-sm">
                   - Facilitated Sprint plannings and retrospective as Scrum
                   Master
                 </li>
-                <li>
+                <li className="text-sm">
                   - Assisted Product owner in managing Jira and Confluence
                 </li>
-                <li>
+                <li className="text-sm">
                   - Worked on modifying legacy systems in Ruby for integration
                   in Elixir
                 </li>
-                <li>
+                <li className="text-sm">
                   - Participated in cross product meetings to identify blockers
                 </li>
               </ul>
             </li>
-            <li className="mb-2">
-              <h5>Mar 2019 - Dec 2020</h5>
-              <h3 className="font-medium">StaffOnDemand / Recruiter Pal</h3>
-              <h4>Web Developer</h4>
+            <li className="mb-4">
+              <ItemHeader
+                header="StaffOnDemand / Recruiter Pal"
+                subHeader="Web Developer"
+                dateTime="Mar 2019 - Dec 2020"
+              ></ItemHeader>
               <ul>
-                <li>
-                  - Develop new features for Recruiter Pal ATS in Laravel (PHP)
+                <li className="text-sm">
+                  - Developed new features for Recruiter Pal ATS in Laravel (PHP)
                   and Angular JS
                 </li>
-                <li>
-                  - Prototype Mobile App in React Native for investor pitch
+                <li className="text-sm">
+                  - Worked on prototype mobile app in React Native
                 </li>
               </ul>
             </li>
-            <li className="mb-2">
-              <h5>Nov 2018 - Mar 2019</h5>
-              <h3 className="font-medium">General Assembly</h3>
-              <h4>Instructional Associate</h4>
+            <li className="mb-4">
+              <ItemHeader
+                header="General Assembly"
+                subHeader="Instructional Associate"
+                dateTime="Nov 2018 - Mar 2019"
+              ></ItemHeader>
               <ul>
-                <li>
+                <li className="text-sm">
                   - Assisted lead instructor with class administration and
                   lessons
                 </li>
-                <li>- Helped students with their queries and assignments</li>
+                <li className="text-sm">
+                  - Helped students with their queries and assignments
+                </li>
               </ul>
             </li>
-            <li className="mb-2">
-              <h5>Nov 2016 - Dec 2017</h5>
-              <h3 className="font-medium">ST Electronics</h3>
-              <h4>Associate Engineer (Transmission Systems)</h4>
+            <li className="mb-4">
+              <ItemHeader
+                header="ST Electronics"
+                subHeader="Associate Engineer"
+                dateTime="Nov 2016 - Dec 2017"
+              ></ItemHeader>
               <ul>
-                <li>- Responded to network incidents as L2 Support</li>
-                <li>- Key Man for Network Management System issues </li>
-                <li>- Assist vendors with equipment deployments on site</li>
+                <li className="text-sm">
+                  - Responded to network incidents as L2 Support
+                </li>
+                <li className="text-sm">
+                  - Key Man for Network Management System issues{" "}
+                </li>
+                {/* <li className="text-sm">
+                  - Assisted vendors with equipment deployments on site
+                </li> */}
               </ul>
             </li>
-            <li className="mb-2">
-              <h5>2011 - 2016</h5>
-              <h3 className="font-medium">Singapore Armed Forces</h3>
-              <h4>Military Intelligence Engineer</h4>
+            <li className="">
+              <ItemHeader
+                header="Singapore Armed Forces"
+                subHeader="Military Intelligence Engineer"
+                dateTime="2011 - 2016"
+              ></ItemHeader>
               <ul>
-                <li>- Responded to network incidents as L1 Support</li>
-                <li>
+                <li className="text-sm">
+                  - Responded to network incidents as L1 Support
+                </li>
+                {/* <li className="text-sm">
                   - Escorted external contractors in secure locations for
                   equipment deployments
-                </li>
+                </li> */}
               </ul>
             </li>
           </ul>
