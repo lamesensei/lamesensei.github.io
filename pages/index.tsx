@@ -22,6 +22,7 @@ const Home: NextPage = () => {
     <main className="p-4 flex flex-col items-center flex-1 relative">
       <Head>
         <title>LJ&apos;s Resume</title>
+        <meta name="description" content="Hire me maybe?" />
       </Head>
       <button
         onClick={() => window.print()}
