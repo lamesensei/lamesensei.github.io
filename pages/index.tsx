@@ -184,7 +184,7 @@ const Home: NextPage = () => {
                 <li className="">
                   <ItemHeader
                     header="Singapore Armed Forces"
-                    subHeader="Military Intelligence Engineer"
+                    subHeader="Military Intelligence Expert"
                     dateTime="2011 - 2016"
                   ></ItemHeader>
                   <ul className="text-xs list-disc list-inside text-gray-800">
