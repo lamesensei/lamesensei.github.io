@@ -1,5 +1,10 @@
-import { PropsWithChildren } from "react";
+import { ReactNode } from "react";
 
-export const Text = ({ children }: PropsWithChildren): JSX.Element => (
-  <p className="text-sm text-gray-700">{children}</p>
+type TextProps = {
+  children?: ReactNode;
+  className?: string;
+};
+
+export const Text = ({ children, className }: TextProps): JSX.Element => (
+  <p className={className ? className : "text-sm text-gray-700"}>{children}</p>
 );
