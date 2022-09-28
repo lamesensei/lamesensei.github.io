@@ -1,22 +1,22 @@
 import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
+import { faInbox } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import { ItemHeader } from "../components/ItemHeader";
 import { SectionHeader } from "../components/SectionHeader";
 import { SectionSubHeader } from "../components/SectionSubHeader";
 import { SkillBadge } from "../components/SkillBadge";
 import { Text } from "../components/Text";
 
-const ONE_SECOND = 1000;
+const SECRET = "sesame";
 
 const Home: NextPage = () => {
-  const [delayRender, setDelayRender] = useState(true);
+  const router = useRouter();
 
-  useEffect(() => {
-    setTimeout(() => setDelayRender(false), ONE_SECOND);
-  });
+  const { open } = router.query;
+  const isOpen = open === SECRET;
 
   return (
     <main className="p-4 flex flex-col items-center flex-1 relative">
@@ -48,19 +48,39 @@ const Home: NextPage = () => {
                   rel="noreferrer"
                   className="flex justify-start items-center lg:justify-end print:justify-end"
                 >
-                  <Text className="order-2 lg:order-1">/phualiangjun</Text>
+                  <Text className="order-2 print:order-1 lg:order-1">
+                    /phualiangjun
+                  </Text>
                   <i className="devicon-linkedin-plain colored mx-1 order-1"></i>
                 </a>
               </li>
               <li>
                 <a
-                  href={!delayRender ? "tel:+6596346924" : ""}
+                  href="mailto:resume@phualiangjun.com"
                   className="flex justify-start items-center lg:justify-end print:justify-end"
                 >
-                  {!delayRender ? (
-                    <Text className="order-2 lg:order-1">+65 96346924</Text>
+                  <Text className="order-2 print:order-1 lg:order-1">
+                    hello@phualiangjun.com
+                  </Text>
+                  <FontAwesomeIcon
+                    icon={faInbox}
+                    className="text-orange-600 mx-1 order-1"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={isOpen ? "tel:+6596346924" : ""}
+                  className="flex justify-start items-center lg:justify-end print:justify-end"
+                >
+                  {isOpen ? (
+                    <Text className="order-2 print:order-1 lg:order-1">
+                      +65 96346924
+                    </Text>
                   ) : (
-                    <Text className="order-2 lg:order-1">redacted...</Text>
+                    <Text className="order-2 print:order-1 lg:order-1">
+                      Via Above
+                    </Text>
                   )}
                   <FontAwesomeIcon
                     icon={faWhatsappSquare}
