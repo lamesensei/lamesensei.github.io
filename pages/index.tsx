@@ -1,6 +1,7 @@
 import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { NextPage } from "next";
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import { ItemHeader } from "../components/ItemHeader";
 import { SectionHeader } from "../components/SectionHeader";
@@ -19,6 +20,9 @@ const Home: NextPage = () => {
 
   return (
     <main className="p-4 flex flex-col items-center flex-1 relative">
+      <Head>
+        <title>LJ&apos;s Resume</title>
+      </Head>
       <button
         onClick={() => window.print()}
         className="absolute top-4 right-4 bg-black text-white font-medium border rounded text-sm py-1 px-1.5 border-black print:hidden"
@@ -61,7 +65,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <div className="print:flex lg:flex">
-        <div className="py-4 print:p-4 print:pl-0 print:border-r lg:p-4 lg:pl-0 lg:border-r">
+        <div className="py-4 print:p-4 print:pl-0 print:border-r lg:p-4 lg:pl-0 lg:border-r border-b print:border-b-0 lg:border-b-0">
             {/* Experience */}
             <section className="">
               <SectionHeader>Experience</SectionHeader>
@@ -130,13 +134,13 @@ const Home: NextPage = () => {
                 </li>
                 <li className="mb-4">
                   <ItemHeader
-                    header="Recruiter Pal"
+                    header="RecruiterPal"
                     subHeader="Web Developer"
                     dateTime="Mar 2019 - Dec 2020"
                   ></ItemHeader>
                   <ul className="text-xs list-disc list-inside text-gray-800">
                     <li>
-                      Developed new features for Recruiter Pal ATS in Laravel
+                      Developed new features for RecruiterPal ATS in Laravel
                       (PHP) and Angular JS
                     </li>
                     <li>Worked on prototype mobile app in React Native</li>
@@ -297,7 +301,6 @@ const Home: NextPage = () => {
               <SectionHeader>Notes</SectionHeader>
             </section>
           </div>
- 
         </div>
       </div>
       <footer className="print:absolute print:bottom-0 print:m-0 print:p-0 p-4">
