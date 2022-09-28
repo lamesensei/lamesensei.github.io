@@ -31,7 +31,7 @@ const Home: NextPage = () => {
       </button>
       <div className="max-w-3xl min-w-min mb-8">
         {/* Header */}
-        <section className="bg-white border-b pb-4 flex flex-col md:flex-row print:flex-row space-between">
+        <section className="bg-white border-b pb-4 flex flex-col lg:flex-row print:flex-row space-between">
           <div>
             <SectionHeader>Phua Liang Jun</SectionHeader>
             <SectionSubHeader>Full-Stack Software Engineer</SectionSubHeader>
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
               Likes keeping things simple -- whether it be code or processes
             </Text>
           </div>
-          <div className="flex-1 text-sm md:text-right mt-2 md:mt-0 text-gray-500 print:text-right print:mt-0">
+          <div className="flex-1 text-sm mt-2 lg:mt-0 text-gray-500 print:mt-0">
             <ul>
               <li>
                 <a
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
                   rel="noreferrer"
                   className="flex justify-start items-center lg:justify-end print:justify-end"
                 >
-                  <Text className="order-2 lg:order-0">/phualiangjun</Text>
+                  <Text className="order-2 lg:order-1">/phualiangjun</Text>
                   <i className="devicon-linkedin-plain colored mx-1 order-1"></i>
                 </a>
               </li>
@@ -58,9 +58,9 @@ const Home: NextPage = () => {
                   className="flex justify-start items-center lg:justify-end print:justify-end"
                 >
                   {!delayRender ? (
-                    <Text className="order-2 lg:order-0">+65 96346924</Text>
+                    <Text className="order-2 lg:order-1">+65 96346924</Text>
                   ) : (
-                    <Text className="order-2 lg:order-0">redacted...</Text>
+                    <Text className="order-2 lg:order-1">redacted...</Text>
                   )}
                   <FontAwesomeIcon
                     icon={faWhatsappSquare}
